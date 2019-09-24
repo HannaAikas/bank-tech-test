@@ -14,11 +14,11 @@ class Statement
     line_items = []
     @statement_items.each do |item|
       item.each do |key, value|
-        if value[0] == :deposit
-          line_items << deposit_item(key, value)
-        else
-          line_items << withdrawal_item(key, value)
-        end
+        line_items << if value[0] == :deposit
+                        deposit_item(key, value)
+                      else
+                        withdrawal_item(key, value)
+                      end
       end
     end
     puts statement_template

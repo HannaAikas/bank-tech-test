@@ -19,6 +19,7 @@ describe Client do
 
   describe '#withdraw_money' do
     it 'decreases the balance' do
+      @client_a.deposit_money(100, '20/09/2019')
       expect do
         @client_a.withdraw_money(30, '24/09/2019')
       end.to change { @client_a.see_balance }.by(-30)
