@@ -1,9 +1,5 @@
 Documentation:
     Enabled: false
 
-Layout/SpaceAroundOperators:
-  # disabled as spec has dates in format: 10-01-2012
-  Enabled: false
-
 Style/FrozenStringLiteralComment:
   Enabled: false
