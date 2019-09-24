@@ -1,6 +1,4 @@
 class Client
-  # attr_reader :check_balance
-
   def initialize
     @balance = 0
   end

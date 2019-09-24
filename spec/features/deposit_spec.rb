@@ -7,9 +7,9 @@ describe Client do
     end
 
     it 'deposits money' do
-      expect(@client_a.check_balance).to be 0
-      @client_a.deposit(100, 20-9-2019)
-      expect(@client_a.check_balance).to be 100
+      expect do
+        @client_a.deposit(100, 20-9-2019)
+      end.to change { @client_a.check_balance }.by(100)
     end
   end
 end
