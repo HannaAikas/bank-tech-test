@@ -1,16 +1,12 @@
 require 'statement'
+
 describe Statement do
   before(:each) do
-    @client_a = Client.new
-    @client_a.deposit_money(100, '20/09/2019')
+    @test_statement = Statement.new
+    @test_statement.add_statement_item(:deposit, 100, '20/09/2019', 100)
   end
-
-  it 'holds a record of all transactions' do
-    expect(@client_a.see_statement_items).to eq [{ '20/09/2019' => [:deposit, 100, 100] }]
-  end
-
-  it '#create_statement makes an array of transactions' do
-    test_array = ['20/09/2019 || 100.00 || || 100.00']
-    expect(@client_a.print_statement).to eq test_array
+  it 'stores a record of transactions' do
+    expected_result = [{ '20/09/2019' => [:deposit, 100, 100] }]
+    expect(@test_statement.statement_items). to eq expected_result
   end
 end

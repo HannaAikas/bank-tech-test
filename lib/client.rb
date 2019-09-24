@@ -23,10 +23,6 @@ class Client
     @statement.add_statement_item(:withdrawal, amount, date, new_balance)
   end
 
-  def see_statement_items
-    @statement.check_statement_items
-  end
-
   def print_statement
     @statement.create_statement
   end

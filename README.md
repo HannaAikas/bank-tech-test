@@ -2,7 +2,7 @@
 * Purpose: Tech test completed in 1 day using Ruby. Aim to demonstrate good TDD process and application of OO principles.
 * Current status of project: Acceptance criteria / user requirements met (see below for details)
 * To be completed next: Refactor; Add tests for edge cases; Consider splitting out a controller (e.g. app.rb) vs leaving current structure; Seek feedback e.g. should user receive confirmation messages after each interaction.
-* Notes - to be considered for Refactor: Check linter & test coverage, remove any methods no longer required, SRP (small classes, small methods), mocking in tests, split of feature vs. unit tests, test behaviour
+* Notes - to be considered for Refactor: SRP (small classes, small methods), mocking in tests
 
 ## Instructions - How to Test the App
 * Clone this repo onto your computer.
