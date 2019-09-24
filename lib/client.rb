@@ -1,13 +1,15 @@
+require_relative './transaction.rb'
+
 class Client
-  def initialize
-    @balance = 0
+  def initialize(transaction = Transaction.new)
+    @transaction = transaction
   end
 
-  def check_balance
-    @balance
+  def see_balance
+    @transaction.check_balance
   end
 
-  def deposit(amount, date)
-    @balance += amount
+  def deposit_money(amount, date)
+    @transaction.do_deposit(amount, date)
   end
 end

@@ -12,10 +12,10 @@
 
 ## Instructions - How to Test the App
 * Follow above instructions to: clone the repo, navigate to folder, run bundle install
-* Open IRB on your Terminal, requiring this file: `irb -r ./lib/client.rb`
+* Open IRB on your Terminal and require the client file: `irb -r './lib/client.rb'`
 * To start, set up a new client e.g: `client_a = Client.new`
-* To deposit money e.g 100 on 20-9-2019: `client_a.deposit(100, 20-9-2019)`
-* To withdraw money e.g 50 on 24-9-2019: `client_a.withdraw(50, 24-9-2019)`
+* To deposit money e.g 100 on 20-9-2019: `client_a.deposit_money(100, 20-9-2019)`
+* To withdraw money e.g 50 on 24-9-2019: `client_a.withdraw_money(50, 24-9-2019)`
 * To print your bank statement e.g: `client_a.print_statement`
 * To exit IRB: `exit`
 

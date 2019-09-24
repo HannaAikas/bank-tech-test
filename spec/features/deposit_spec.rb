@@ -8,8 +8,8 @@ describe Client do
 
     it 'deposits money' do
       expect do
-        @client_a.deposit(100, 20-9-2019)
-      end.to change { @client_a.check_balance }.by(100)
+        @client_a.deposit_money(100, 20-9-2019)
+      end.to change { @client_a.see_balance }.by(100)
     end
   end
 end
