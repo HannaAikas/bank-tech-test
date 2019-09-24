@@ -12,4 +12,8 @@ class Transaction
   def do_deposit(amount, date)
     @balance += amount
   end
+
+  def do_withdrawal(amount, date)
+    @balance -= amount
+  end
 end

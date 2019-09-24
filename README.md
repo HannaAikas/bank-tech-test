@@ -15,7 +15,7 @@
 * Open IRB on your Terminal and require the client file: `irb -r './lib/client.rb'`
 * To start, set up a new client e.g: `client_a = Client.new`
 * To deposit money e.g 100 on 20-9-2019: `client_a.deposit_money(100, 20-9-2019)`
-* To withdraw money e.g 50 on 24-9-2019: `client_a.withdraw_money(50, 24-9-2019)`
+* To withdraw money e.g 30 on 24-9-2019: `client_a.withdraw_money(30, 24-9-2019)`
 * To print your bank statement e.g: `client_a.print_statement`
 * To exit IRB: `exit`
 

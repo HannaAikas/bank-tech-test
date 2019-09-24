@@ -12,4 +12,8 @@ class Client
   def deposit_money(amount, date)
     @transaction.do_deposit(amount, date)
   end
+
+  def withdraw_money(amount, date)
+    @transaction.do_withdrawal(amount, date)
+  end
 end
