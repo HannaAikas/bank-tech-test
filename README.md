@@ -1,7 +1,7 @@
 # Bank Tech Test
 * Purpose: Tech test completed in 1 day. Aim to demonstrate good TDD process and application of OO principles.
 * Current status of project: Acceptance criteria / user requirements met (see below for details)
-* To be completed next: (1) Refactor (mocking in tests); (2) Add more tests for edge cases (eg. incorrect user inputs); (3) Consider splitting out a controller (e.g. app.rb) vs leaving current structure; (4) Seek feedback from product owner (e.g. see below for assumptions made).
+* To be completed next: (1) Seek feedback from product owner (e.g. see below - assumptions made); (2) Consider adding more tests for edge cases / unhappy paths; (3) Consider splitting out a controller (e.g. app.rb) vs leaving current structure.
 
 ## Approach Taken
 * Tech Stack: Ruby, RSpec for testing, SimpleCov for test coverage, Rubocop linter.
