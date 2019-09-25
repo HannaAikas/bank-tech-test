@@ -14,11 +14,7 @@ class Statement
     line_items = []
     @statement_items.each do |item|
       item.each do |key, value|
-        line_items << if value[0] == :deposit
-                        deposit_item(key, value)
-                      else
-                        withdrawal_item(key, value)
-                      end
+        line_items << line_item(key, value)
       end
     end
     puts statement_template
@@ -31,11 +27,11 @@ class Statement
     'date || credit || debit || balance'
   end
 
-  def deposit_item(key, value)
-    "#{key} || #{format('%.2f', value[1])} || || #{format('%.2f', value[2])}"
-  end
-
-  def withdrawal_item(key, value)
-    "#{key} || || #{format('%.2f', value[1])} || #{format('%.2f', value[2])}"
+  def line_item(key, value)
+    if value[0] == :deposit
+      "#{key} || #{format('%.2f', value[1])} || || #{format('%.2f', value[2])}"
+    else
+      "#{key} || || #{format('%.2f', value[1])} || #{format('%.2f', value[2])}"
+    end
   end
 end
