@@ -5,9 +5,6 @@ describe Client do
     @client_a = Client.new
   end
 
-  it 'creates clients' do
-    expect(@client_a).to be_a_kind_of(Client)
-  end
   it 'deposits money' do
     action = @client_a.deposit_money(100, '20/09/2019')
     expect(action).to eq [{ '20/09/2019' => [:deposit, 100, 100] }]
