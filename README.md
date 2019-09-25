@@ -24,7 +24,7 @@
 * To run tests, run Rspec on your terminal: `rspec` which will show test results and SimpleCov test coverage stat
 * To run the linter, run Rubocop on your terminal: `rubocop`
 
-## Instructions - How to Test the App
+## Instructions - How to Use the App
 * Follow above instructions to: clone the repo, navigate to folder, run bundle install
 * Open IRB on your Terminal and require the client file: `irb -r './lib/client.rb'`
 * To start, set up a new client e.g: `client_a = Client.new`
