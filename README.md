@@ -32,6 +32,8 @@
 * To withdraw money e.g 30 on 24/09/2019: `client_a.withdraw_money(30, '24/09/2019')`
 * To print your bank statement e.g: `client_a.print_statement`
 * To exit IRB: `exit`
+* See below screenshot for example:
+![Demo](./images/Screenshot_Demo.png)
 
 ## Specification (original instructions, as received from Makers)
 
