@@ -11,9 +11,9 @@
 * Edge cases - guard against client withdrawing more than their balance.
 * Unhappy paths - check that user inputs a valid date, in format 'DD/MM/YYYY'.
 ### Structured code into several classes:
-* Client - creates instances of client, also acts as a de facto controller (seek feedback on whether this should be split out into separate controller e.g. app.rb).
-* Transaction - keeps record of bank balance and handles transactions i.e. deposits and withdrawals.
-* Statement - keeps record of transactions and is able to produce a statement showing these.
+* Client - creates instances of client, acts as a de facto controller (seek feedback on whether this should be split out into separate controller e.g. app.rb, or left in client.rb).
+* Transaction - handles transactions i.e. deposits and withdrawals.
+* Statement - is able to produce a statement showing these.
 ### Testing:
 * Feature test is from user perspective and simulates key interactions - create new user, deposit, withdraw, print statement
 * Unit tests focus on specific classes and methods as well as identified edge case.
