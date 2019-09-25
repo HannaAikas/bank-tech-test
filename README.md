@@ -8,7 +8,8 @@
 ### Assumptions made:
 * App should allow us to create instances of client, so that it could be used for several clients.
 * Spec did not mention providing any confirmation messages back to client after each transaction, could build these in later if required.
-* Edge cases - assume we should guard against client withdrawing more than their balance
+* Edge cases - guard against client withdrawing more than their balance.
+* Unhappy paths - check that user inputs a valid date, in format 'DD/MM/YYYY'.
 ### Structured code into several classes:
 * Client - creates instances of client, also acts as a de facto controller (seek feedback on whether this should be split out into separate controller e.g. app.rb).
 * Transaction - keeps record of bank balance and handles transactions i.e. deposits and withdrawals.
