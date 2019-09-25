@@ -5,7 +5,7 @@ describe Client do
     @client_a = Client.new
   end
 
-  it 'creates clients with a nil balance' do
-    expect(@client_a.see_balance).to eq 0
+  it 'creates clients' do
+    expect(@client_a).to be_a_kind_of(Client)
   end
 end

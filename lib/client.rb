@@ -7,10 +7,6 @@ class Client
     @statement = statement
   end
 
-  def see_balance
-    @transaction.check_balance
-  end
-
   def deposit_money(amount, date)
     @transaction.do_deposit(amount, date)
     new_balance = @transaction.check_balance
