@@ -1,14 +1,28 @@
 # Bank Tech Test
-* Purpose: Tech test completed in 1 day using Ruby. Aim to demonstrate good TDD process and application of OO principles.
+* Purpose: Tech test completed in 1 day. Aim to demonstrate good TDD process and application of OO principles.
 * Current status of project: Acceptance criteria / user requirements met (see below for details)
-* To be completed next: (1) Refactor (mocking in tests); (2) Add more tests for edge cases (eg. incorrect user inputs); (3) Consider splitting out a controller (e.g. app.rb) vs leaving current structure; (4) Seek feedback e.g. should user receive confirmation messages after each interaction or is this not required (not mentioned in spec).
+* To be completed next: (1) Refactor (mocking in tests); (2) Add more tests for edge cases (eg. incorrect user inputs); (3) Consider splitting out a controller (e.g. app.rb) vs leaving current structure; (4) Seek feedback from product owner (e.g. see below for assumptions made).
+
+## Approach Taken
+* Tech Stack: Ruby, RSpec for testing, SimpleCov for test coverage, Rubocop linter.
+### Assumptions made:
+* App should allow us to create instances of client, so that it could be used for several clients.
+* Spec did not mention providing any confirmation messages back to client after each transaction, could build these in later if required.
+* Edge cases - assume we should guard against client withdrawing more than their balance
+### Structured code into several classes:
+* Client - creates instances of client, also acts as a de facto controller (seek feedback on whether this should be split out into separate controller e.g. app.rb).
+* Transaction - keeps record of bank balance and handles transactions i.e. deposits and withdrawals.
+* Statement - keeps record of transactions and is able to produce a statement showing these.
+### Testing:
+* Feature test is from user perspective and simulates key interactions - create new user, deposit, withdraw, print statement
+* Unit tests focus on specific classes and methods as well as identified edge case.
 
 ## Instructions - How to Test the App
 * Clone this repo onto your computer.
 * Navigate into the folder e.g. `cd bank-tech-test`
 * Run `bundle install` to install dependencies
 * To run tests, run Rspec on your terminal: `rspec` which will show test results and SimpleCov test coverage stat
-* To run the linter, run Rubocopy on your terminal: `rubocop`
+* To run the linter, run Rubocop on your terminal: `rubocop`
 
 ## Instructions - How to Test the App
 * Follow above instructions to: clone the repo, navigate to folder, run bundle install
