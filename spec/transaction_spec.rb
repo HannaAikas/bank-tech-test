@@ -7,10 +7,9 @@ describe Transaction do
   end
 
   describe '#do_deposit' do
-    it 'increases the balance' do
-      expect do
-        @transaction.do_deposit(100, '20/09/2019')
-      end.to change { @transaction.check_balance }.by(100)
+    it 'doing a deposit returns the revised balance' do
+      test_transaction = @transaction.do_deposit(100, '20/09/2019')
+      expect(test_transaction).to eq 200
     end
     it 'returns error if date invalid' do
       expect do
@@ -20,10 +19,9 @@ describe Transaction do
   end
 
   describe '#do_withdrawal' do
-    it 'decreases the balance' do
-      expect do
-        @transaction.do_withdrawal(30, '24/09/2019')
-      end.to change { @transaction.check_balance }.by(-30)
+    it 'doing a withdrawal returns the revised balance' do
+      test_transaction = @transaction.do_withdrawal(30, '24/09/2019')
+      expect(test_transaction).to eq 70
     end
     it 'returns error if balance insufficient' do
       expect do
